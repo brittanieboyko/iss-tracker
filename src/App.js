@@ -1,8 +1,12 @@
 import './App.css';
+import Tracker from './Pages/Tracker/Tracker';
 
 function App() {
   return (
-    <header> ISS Tracker</header>
+    <>
+      <header> ISS Tracker</header>
+      <Tracker />
+    </>
   );
 }
 
