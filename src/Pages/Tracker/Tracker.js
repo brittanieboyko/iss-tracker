@@ -1,5 +1,5 @@
 import {React, useState } from 'react';
-import axios from 'axios';
+import {getIssLocation} from '../../API/api';
 
 const Tracker = () => {
     let [issPosition, setIssPosition] = useState('')
@@ -7,12 +7,10 @@ const Tracker = () => {
     const fetchData = (e) => {
         e.preventDefault()
 
-        axios({
-            'method':'GET',
-            'url':'http://api.open-notify.org/iss-now.json',
-        })
+        getIssLocation()
         .then((response)=>{
             setIssPosition(response.data.data);
+            console.log(response);
         })
         .catch((error) => {
             console.log(error)
