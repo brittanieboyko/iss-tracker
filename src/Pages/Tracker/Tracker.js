@@ -1,11 +1,17 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { getIssLocation } from "../../API/api";
 
 const Tracker = () => {
   let [issPosition, setIssPosition] = useState("");
-
-  const fetchData = (e) => {
-    e.preventDefault();
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      fetchData();
+    }, 5000);
+    return () => clearInterval(interval);
+  })
+  
+  const fetchData = () => {
 
     getIssLocation()
       .then((response) => {
@@ -17,11 +23,10 @@ const Tracker = () => {
       });
   };
 
+
   return (
     <div>
-      <button onClick={(e) => fetchData(e)} type="button">
-        Click Me For Data
-      </button>
+      <h1>ISS TRACKER</h1>
     </div>
   );
 };
