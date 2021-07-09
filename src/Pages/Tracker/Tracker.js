@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { getIssLocation } from "../../API/api";
+import Map from "../../Components/Map/Map";
 
 const Tracker = () => {
   let [issPosition, setIssPosition] = useState("");
@@ -26,7 +27,7 @@ const Tracker = () => {
 
   return (
     <div>
-      <h1>ISS TRACKER</h1>
+      <Map />
     </div>
   );
 };
