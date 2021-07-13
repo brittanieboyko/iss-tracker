@@ -3,7 +3,6 @@ import GoogleMapReact from "google-map-react";
 import MapMarker from "../MapMarker/MapMarker"
 
 const Map = ({ latlon }) => {
-  console.log("map", latlon);
   const defaultProps = {
     center: {
       lat: 10.99835602,
