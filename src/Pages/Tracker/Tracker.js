@@ -16,7 +16,7 @@ const Tracker = () => {
 
     getIssLocation()
       .then((response) => {
-        setIssPosition(response.data);
+        setIssPosition(response.data.iss_position);
         console.log(issPosition);
       })
       .catch((error) => {

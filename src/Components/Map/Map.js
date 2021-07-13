@@ -1,8 +1,9 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
+import MapMarker from "../MapMarker/MapMarker"
 
 const Map = ({ latlon }) => {
-  console.log("map",latlon)
+  console.log("map", latlon);
   const defaultProps = {
     center: {
       lat: 10.99835602,
@@ -18,6 +19,7 @@ const Map = ({ latlon }) => {
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
+        <MapMarker lat={latlon.latitude} lng={latlon.longitude} text="My Marker" />
       </GoogleMapReact>
     </div>
   );
