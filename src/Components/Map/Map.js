@@ -1,24 +1,28 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
-import MapMarker from "../MapMarker/MapMarker"
+import MapMarker from "../MapMarker/MapMarker";
 
 const Map = ({ latlon }) => {
   const defaultProps = {
     center: {
-      lat: 10.99835602,
-      lng: 77.01502627,
+      lat: parseFloat(latlon.latitude) || 0,
+      lng: parseFloat(latlon.longitude) || 0,
     },
-    zoom: 11,
+    zoom: 3,
   };
 
   return (
-    <div style={{ height: "100vh", width: "100%" }}>
+    <div style={{ height: "90vh", width: "90%" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_API }}
-        defaultCenter={defaultProps.center}
+        center={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
-        <MapMarker lat={latlon.latitude} lng={latlon.longitude} text="My Marker" />
+        <MapMarker
+          lat={latlon.latitude}
+          lng={latlon.longitude}
+          text="My Marker"
+        />
       </GoogleMapReact>
     </div>
   );
