@@ -8,7 +8,7 @@ const Tracker = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       fetchData();
-    }, 50000);
+    }, 5000);
     return () => clearInterval(interval);
   })
   
@@ -27,7 +27,7 @@ const Tracker = () => {
 
   return (
     <div>
-      <Map />
+      <Map latlon={issPosition}/>
     </div>
   );
 };
