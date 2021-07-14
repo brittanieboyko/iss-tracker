@@ -1,7 +1,10 @@
 import React from "react";
+import rocketIcon from "../../images/rocketIcon.svg";
 
 const MapMarker = () => {
-  return <div>HI THIS IS THE ISS</div>;
+  return <img src={rocketIcon} alt="rocketIcon"/>;
 };
 
 export default MapMarker;
+
+ 
