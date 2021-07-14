@@ -8,7 +8,7 @@ const Tracker = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       fetchData();
-    }, 5000);
+    }, 1000);
     return () => clearInterval(interval);
   });
 

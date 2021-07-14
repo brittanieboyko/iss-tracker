@@ -21,7 +21,6 @@ const Map = ({ latlon }) => {
         <MapMarker
           lat={latlon.latitude}
           lng={latlon.longitude}
-          text="My Marker"
         />
       </GoogleMapReact>
     </div>
