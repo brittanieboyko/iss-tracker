@@ -1,8 +1,9 @@
 import React from "react";
 import rocketIcon from "../../images/rocketIcon.svg";
+import "./MapMarker.css";
 
 const MapMarker = () => {
-  return <img src={rocketIcon} alt="rocketIcon"/>;
+  return <img class="marker" src={rocketIcon} alt="rocketIcon"/>;
 };
 
 export default MapMarker;
