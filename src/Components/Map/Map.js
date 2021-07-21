@@ -1,6 +1,7 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import MapMarker from "../MapMarker/MapMarker";
+import Header from "../Header/Header";
 import mapStyle from "../../assets/MapStyles";
 
 const Map = ({ latlon }) => {
@@ -26,10 +27,7 @@ const Map = ({ latlon }) => {
       >
         <MapMarker lat={latlon.latitude} lng={latlon.longitude} />
       </GoogleMapReact>
-      <h1>ISS TRACKER</h1>
-      <h2>
-        lat: {defaultProps.center.lat} lon: {defaultProps.center.lng}
-      </h2>
+      <Header />
     </div>
   );
 };
