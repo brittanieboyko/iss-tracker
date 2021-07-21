@@ -25,6 +25,8 @@ const Map = ({ latlon }) => {
       >
         <MapMarker lat={latlon.latitude} lng={latlon.longitude} />
       </GoogleMapReact>
+      <h1>ISS TRACKER</h1>
+      <h2>`lat: {defaultProps.center.lat} long: {defaultProps.center.lng}`</h2>
     </div>
   );
 };
