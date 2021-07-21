@@ -21,13 +21,15 @@ const Map = ({ latlon }) => {
         defaultZoom={defaultProps.zoom}
         options={{
           styles: defaultProps.styles.mapStyle,
-          zoomControl:false
+          zoomControl: false,
         }}
       >
         <MapMarker lat={latlon.latitude} lng={latlon.longitude} />
       </GoogleMapReact>
       <h1>ISS TRACKER</h1>
-      <h2>lat: {defaultProps.center.lat} long: {defaultProps.center.lng}</h2>
+      <h2>
+        lat: {defaultProps.center.lat} lon: {defaultProps.center.lng}
+      </h2>
     </div>
   );
 };
