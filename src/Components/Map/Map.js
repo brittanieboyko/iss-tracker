@@ -27,7 +27,7 @@ const Map = ({ latlon }) => {
       >
         <MapMarker lat={latlon.latitude} lng={latlon.longitude} />
       </GoogleMapReact>
-      <Header />
+      <Header issLat={defaultProps.center.lat} issLon={defaultProps.center.lng}/>
     </div>
   );
 };

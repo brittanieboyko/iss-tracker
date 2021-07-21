@@ -1,10 +1,12 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ issLat, issLon }) => {
   return (
     <>
       <h1>ISS TRACKER</h1>
-      <h3>lat: lon:</h3>
+      <h3>
+        lat: {issLat} lon: {issLon}
+      </h3>
     </>
   );
 };
