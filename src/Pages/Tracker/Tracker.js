@@ -3,7 +3,7 @@ import { getIssLocation } from "../../API/api";
 import Map from "../../Components/Map/Map";
 
 const Tracker = () => {
-  let [issPosition, setIssPosition] = useState("");
+  let [issPosition, setIssPosition] = useState({longitude: 0, latitude:0});
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -16,6 +16,7 @@ const Tracker = () => {
     getIssLocation()
       .then((response) => {
         setIssPosition(response.data.iss_position);
+        console.log(issPosition)
       })
       .catch((error) => {
         console.log(error);

@@ -7,13 +7,12 @@ import mapStyle from "../../assets/MapStyles";
 const Map = ({ latlon }) => {
   const defaultProps = {
     center: {
-      lat: parseFloat(latlon.latitude) || 0,
-      lng: parseFloat(latlon.longitude) || 0,
+      lat: parseFloat(latlon.latitude),
+      lng: parseFloat(latlon.longitude),
     },
     zoom: 3,
     styles: mapStyle,
   };
-  console.log(defaultProps.styles.mapStyle);
   return (
     <div style={{ height: "80vh", width: "100%" }}>
       <GoogleMapReact
