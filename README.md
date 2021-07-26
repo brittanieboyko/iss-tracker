@@ -1,12 +1,15 @@
 # Objective
-The ISS tracker shows where in the world the International Space Station is right now. It's currently being hosted [here](https://calm-shelf-58225.herokuapp.com/) on heroku.
+The ISS tracker shows where in the world the International Space Station is right now.
 
 
 # Technologies Used
 * React JS
 * Google Maps API
 
-# Getting Started with Create React App
+# Production
+The ISS-tracker is currently being hosted [here](https://calm-shelf-58225.herokuapp.com/) on Heroku.
+
+# Development
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
