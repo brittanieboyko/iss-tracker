@@ -10,7 +10,7 @@ const Map = ({ latlon }) => {
       lat: parseFloat(latlon.latitude),
       lng: parseFloat(latlon.longitude),
     },
-    zoom: 3,
+    zoom: 1,
     styles: mapStyle,
   };
   return (
